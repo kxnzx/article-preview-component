@@ -1,0 +1,249 @@
+// GOOGLE FONTS
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+// VARIABLES
+// Colors
+$very_dark_grayish_blue: #48556a;
+$desaturated_dark_blue: #6d7f97;
+$grayish_blue: #9eafc2;
+$light_grayish_blue: #ecf2f8;
+// Typography
+// font-family
+$ff: "Manrope", sans-serif;
+// font-weight
+$fw_bold: 700;
+$fw_medium: 500;
+// font-size
+$fs: 0.813rem;
+// Breakpoints
+$mobile: 640px;
+$tablet: 768px;
+$xl_tablet: 960px;
+$desktop: 1024px;
+// RESET
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+// STYLES
+body {
+  display: grid;
+  place-items: center;
+  background-color: $light_grayish_blue;
+  font-family: $ff;
+  font-size: $fs;
+  article {
+    max-width: 20.625rem;
+    position: relative;
+    border-radius: 9px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @media screen and (min-width: $desktop) {
+      display: grid;
+      grid-template-columns: 17.813rem 27.813rem;
+      grid-template-rows: 1fr;
+      max-width: 45.625rem;
+    }
+    .article_image {
+      display: block;
+      width: 100%;
+      height: 12.5rem;
+      object-fit: cover;
+      object-position: left 25%;
+      border-radius: 9px 9px 0 0;
+      @media screen and (min-width: $desktop) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 100%;
+        border-radius: 9px 0 0 9px;
+      }
+    }
+    .article_content {
+      background-color: #ffff;
+      padding: 2.5rem 1.938rem 1.375rem 1.938rem;
+      border-radius: 0 0 9px 9px;
+      @media screen and (min-width: $desktop) {
+        border-radius: 0 9px 9px 0;
+        padding: 2rem 2.5rem 2rem 2.5rem;
+        position: relative;
+      }
+      h1 {
+        color: $very_dark_grayish_blue;
+        font-size: 1.063rem;
+        @media screen and (min-width: $desktop) {
+          font-size: 1.313rem;
+        }
+      }
+      p {
+        color: $desaturated_dark_blue;
+        padding-top: 0.938rem;
+        max-width: 16rem;
+        line-height: 1.6;
+        @media screen and (min-width: $desktop) {
+          max-width: 21.563rem;
+        }
+      }
+      .article_footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        padding-top: 1.625rem;
+        @media screen and (min-width: $desktop) {
+          padding-top: 1.375rem;
+        }
+        .article_profile-picture {
+          border-radius: 50%;
+          width: 2.5rem;
+          height: auto;
+          object-fit: contain;
+          display: block;
+          margin-right: 0.938rem;
+        }
+        .article_profile-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          flex: 1;
+          gap: 0.125rem;
+          address {
+            color: $very_dark_grayish_blue;
+            font-weight: $fw_bold;
+            font-style: normal;
+          }
+          time {
+            color: $grayish_blue;
+          }
+        }
+        .article_social-media-share {
+          background-color: $light_grayish_blue;
+          border-radius: 50%;
+          padding: 0.5em;
+          object-fit: contain;
+          border: none;
+          width: 1.875rem;
+          height: 1.875rem;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+        }
+      }
+      .article_footer_active-state {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2px;
+        align-items: center;
+        background-color: $very_dark_grayish_blue;
+        padding: 1rem 1.875rem 1rem 1.875rem;
+        border-radius: 0 0 9px 9px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4.375rem;
+        left: 0;
+        @media screen and (min-width: $desktop) {
+          border-radius: 9px;
+          max-width: 14.5rem;
+          position: absolute;
+          left: 62%;
+          bottom: 34%;
+          height: 3.5rem;
+          grid-template-columns: 1fr 1fr;
+          cursor: pointer;
+          //triangle
+          &::after {
+            background-color: $very_dark_grayish_blue;
+            content: "";
+            display: block;
+            height: 16px;
+            width: 16px;
+            position: absolute;
+            bottom: -7.5px;
+            left: 46%;
+            transform: rotate(47deg) skew(5deg);
+            -moz-transform: rotate(47deg) skew(5deg);
+            -ms-transform: rotate(47deg) skew(5deg);
+            -o-transform: rotate(47deg) skew(5deg);
+            -webkit-transform: rotate(47deg) skew(5deg);
+          }
+        }
+        h2 {
+          color: $grayish_blue;
+          text-transform: uppercase;
+          font-size: 0.813rem;
+          font-weight: $fw_medium;
+          letter-spacing: 0.25rem;
+          margin-right: 1.25rem;
+          @media screen and (min-width: $desktop) {
+            margin: 0;
+          }
+        }
+        .social_media-links {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          flex: 1;
+          gap: 1rem;
+          li {
+            a {
+              color: #fff;
+              width: 1.25rem;
+              i {
+                font-size: 1.375rem;
+              }
+            }
+          }
+        }
+        .article_social-media-share-icon_active-state {
+          background-color: $desaturated_dark_blue;
+          border-radius: 50%;
+          padding: 0.5em;
+          object-fit: contain;
+          border: solid 1px $desaturated_dark_blue;
+          width: 2rem;
+          height: 2rem;
+          cursor: pointer;
+          justify-self: end;
+          @media screen and (min-width: $desktop) {
+            display: none;
+          }
+          .fa-solid {
+            color: #ffff;
+            font-size: 1rem;
+          }
+        }
+      }
+      .switch {
+        display: none;
+      }
+    }
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    .attribution {
+      color: $very_dark_grayish_blue;
+      a {
+        color: #6a9890;
+      }
+    }
+  }
+}

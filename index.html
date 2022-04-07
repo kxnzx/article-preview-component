@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <article>
+      <img
+        class="article_image"
+        src="images/drawers.jpg"
+        alt="ceramic vase with dried flowers and two picture art frames on green wooden drawer"
+      />
+      <!-- ARTICLE CONTENT -->
+      <div class="article_content">
+        <h1>
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p>
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <!-- Article Footer -->
+        <div class="article_footer">
+          <img
+            class="article_profile-picture"
+            src="images/avatar-michelle.jpg"
+            alt="profile picture"
+          />
+          <div class="article_profile-info">
+            <address>Michelle Appleton</address>
+            <time datetime="2020-06-28">28 Jun 2020</time>
+          </div>
+          <a id="click-to-share" class="article_social-media-share" href="#"
+            ><img
+              class="article_share-icon"
+              src="images/icon-share.svg"
+              alt="share"
+          /></a>
+        </div>
+        <!-- active state -->
+        <div id="active-state" class="article_footer_active-state switch">
+          <h2>Share</h2>
+          <ul class="social_media-links">
+            <li>
+              <a
+                href="#
+              "
+                ><i class="fa-brands fa-facebook-square"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#
+              "
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#
+              "
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+            </li>
+          </ul>
+          <a
+            id="click-to-share2"
+            class="article_social-media-share-icon_active-state"
+            href="#"
+            ><i class="fa-solid fa-share"></i
+          ></a>
+        </div>
+        <!-- END Article Footer -->
+      </div>
+      <!-- END ARTICLE CONTENT -->
+    </article>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/kxnzx" target="_blank"
+          >kxnzx</a
+        >.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
